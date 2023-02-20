@@ -32,17 +32,64 @@ namespace ConsoleUI
             */
 
             // Create a list of Vehicle called vehicles
+            var vehicles = new List<Vehicle>();
 
             /*
              * Create 4 instances: 1 Car, 1 Motorcycle, and then 2 instances of type Vehicle (use explicit typing) but use constuctors from derived classes
              * 
              * Set the properties with object initializer syntax
              */
-
+            var car1 = new Car()
+            {
+                HasTrunk = true,
+                Year = "1999",
+                Make = "Ford",
+                Model = "Tarus"
+            };
+            var motorcycle1 = new Motorcycle() 
+            { 
+                HasSideCar = true,
+                Year = "2019",
+                Make = "Yahmaha",
+                Model = "YZF-R6"
+            };
+            var car2 = new Car() 
+            { 
+                HasTrunk = true,
+                Year = "2016",
+                Make = "Dodge",
+                Model = "Challenger"
+                
+            };
+            var motorcycle2 = new Motorcycle() 
+            {
+                HasSideCar = true,
+                Year = "2019",
+                Make = "Honda",
+                Model = "Shadow"
+            };
             /*
              * Add the 4 vehicles to the list
              * Using a foreach loop iterate over each of the properties
              */
+            vehicles.Add(car2);
+            vehicles.Add(motorcycle2);
+            vehicles.Add(car1);
+            vehicles.Add(motorcycle1);
+
+            foreach (var vehicle in vehicles) 
+            {
+                Console.WriteLine($"Year: {vehicle.Year}");
+                Console.WriteLine($"Make: {vehicle.Make}");
+                Console.WriteLine($"Model: {vehicle.Model}");
+                
+                
+                
+                
+                vehicle.DriveAbstract();
+                vehicle.DriveVirtual();
+                Console.WriteLine();
+            }
 
             // Call each of the drive methods for one car and one motorcycle
 
