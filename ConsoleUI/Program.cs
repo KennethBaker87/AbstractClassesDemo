@@ -39,21 +39,21 @@ namespace ConsoleUI
              * 
              * Set the properties with object initializer syntax
              */
-            var car1 = new Car()
+            Car car1 = new Car()
             {
                 HasTrunk = true,
                 Year = "1999",
                 Make = "Ford",
                 Model = "Tarus"
             };
-            var motorcycle1 = new Motorcycle() 
+            Motorcycle motorcycle1 = new Motorcycle() 
             { 
                 HasSideCar = true,
                 Year = "2019",
                 Make = "Yahmaha",
                 Model = "YZF-R6"
             };
-            var car2 = new Car() 
+            Car car2 = new Car() 
             { 
                 HasTrunk = true,
                 Year = "2016",
@@ -61,7 +61,7 @@ namespace ConsoleUI
                 Model = "Challenger"
                 
             };
-            var motorcycle2 = new Motorcycle() 
+            Motorcycle motorcycle2 = new Motorcycle() 
             {
                 HasSideCar = true,
                 Year = "2019",
